@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Jost");
+
+@font-face {
+  font-family: A4SPEED;
+  src: url("fonts/A4SPEED.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  font-family: "Jost";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1d1b1b;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.nav-menu {
+  @apply block backdrop-blur-md bg-main-0 bg-opacity-50;
+}
+
+.banner-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(242, 95, 76, 0.15) 4.03%,
+    rgba(130, 51, 41, 0.8) 54.03%,
+    #1d1b1b 93.61%
+  );
+}
+
+.title-company {
+  position: absolute;
+  width: 953px;
+  height: 714px;
+  left: 406px;
+  top: 50px;
+}
+
